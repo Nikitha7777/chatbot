@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .chat-container {
+            width: 300px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .chat-box {
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .input-box {
+            display: flex;
+        }
+        input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        button {
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <div class="input-box">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            let userInput = document.getElementById("user-input").value;
+            if (userInput.trim() === "") return;
+            
+            let chatBox = document.getElementById("chat-box");
+            chatBox.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
+            document.getElementById("user-input").value = "";
+            
+            setTimeout(() => {
+                let botResponse = getBotResponse(userInput);
+                chatBox.innerHTML += `<p><strong>Bot:</strong> ${botResponse}</p>`;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 500);
+        }
+
+        function getBotResponse(input) {
+            let responses = {
+                "hi": "Hello! How can I help you?",
+                "how are you": "I'm just a bot, but I'm doing great!",
+                "bye": "Goodbye! Have a great day!"
+            };
+            return responses[input.toLowerCase()] || "Sorry, I don't understand.";
+        }
+    </script>
+</body>
+</html>
