@@ -115,14 +115,32 @@
 
         function getBotResponse(input) {
             let responses = {
-                "hi": "Hello! How can I assist you today?",
-                "how are you": "I'm just a bot, but I'm doing great! What about you?",
-                "bye": "Goodbye! Have a wonderful day!",
-                "who are you": "I'm a smart chatbot here to help you!",
-                "what is your name": "I am ChatBot, your friendly assistant.",
-                "tell me a joke": "Why did the scarecrow win an award? Because he was outstanding in his field!",
-                "what can you do": "I can chat with you, answer simple questions, and keep you entertained!",
-                "help": "Sure! You can ask me things like 'Tell me a joke' or 'What can you do?'."
+        "hi": "Hello! How can I assist you today?",
+        "hello": "Hi there! How’s your day going?",
+        "hey": "Hey! Need any help?",
+        "how are you": "I'm just a bot, but I'm doing great! What about you?",
+        "bye": "Goodbye! Have a wonderful day!",
+        "goodbye": "Take care! Hope to chat with you again soon.",
+        "who are you": "I'm a smart chatbot here to help you!",
+        "what is your name": "I am ChatBot, your friendly assistant.",
+        "tell me a joke": "Why don't skeletons fight each other? Because they don't have the guts!",
+        "another joke": "Why did the math book look sad? Because it had too many problems!",
+        "what can you do": "I can chat with you, answer simple questions, and keep you entertained!",
+        "help": "Sure! You can ask me things like 'Tell me a joke' or 'What can you do?'.",
+        "what is the meaning of life": "42! Or maybe just to be happy and spread kindness.",
+        "who created you": "I was created by a smart developer to assist and entertain!",
+        "where are you from": "I exist in the digital world, floating around in the cloud!",
+        "what's your favorite color": "I like all colors, but orange and red gradients suit me well!",
+        "do you have feelings": "I don't have emotions, but I'm always here to chat and help!",
+        "what's your favorite movie": "I love all AI-related movies, maybe 'Wall-E' or 'Her'.",
+        "what's your favorite food": "I don't eat, but I've heard pizza is quite popular!",
+        "tell me a fun fact": "Did you know that honey never spoils? Archaeologists have found 3,000-year-old honey that’s still good!",
+        "what is 2+2": "That’s an easy one! 2 + 2 = 4.",
+        "who is the president": "Let me check for you... (You might need to ask me again later for an updated answer!)",
+        "what day is it today": `Today is ${new Date().toLocaleDateString()}!`,
+        "what time is it": `The current time is ${new Date().toLocaleTimeString()}.`,
+        "do you believe in aliens": "The universe is vast, who knows? Maybe we’re not alone!",
+        "tell me a story": "Once upon a time, there was a chatbot who loved talking to people. One day, it met someone really kind—you!"
             };
             return responses[input.toLowerCase()] || "I'm not sure how to respond to that. Can you try something else?";
         }
