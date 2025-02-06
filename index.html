@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -110,7 +110,7 @@
             let chatBox = document.getElementById("chat-box");
             let messageElement = document.createElement("p");
             messageElement.classList.add(className);
-            messageElement.innerHTML = <strong>${sender}:</strong> ${message};
+            messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
             chatBox.appendChild(messageElement);
             chatBox.scrollTop = chatBox.scrollHeight;
         }
@@ -133,56 +133,4 @@
                 "goodbye": "Take care! Hope to chat with you again soon.",
                 "who are you": "I'm a smart chatbot here to help you!",
                 "what is your name": "I am ChatBot, your friendly assistant.",
-                "tell me a joke": "Why don't skeletons fight each other? Because they don't have the guts!",
-                "another joke": "Why did the math book look sad? Because it had too many problems!",
-                "what can you do": "I can chat with you, answer simple questions, and keep you entertained!",
-                "help": "Sure! You can ask me things like 'Tell me a joke' or 'What can you do?'.",
-                "what is the meaning of life": "42! Or maybe just to be happy and spread kindness.",
-                "who created you": "I was created by a smart developer to assist and entertain!",
-                "where are you from": "I exist in the digital world, floating around in the cloud!",
-                "what's your favorite color": "I like all colors, but orange and red gradients suit me well!",
-                "do you have feelings": "I don't have emotions, but I'm always here to chat and help!",
-                "what's your favorite movie": "I love all AI-related movies, maybe 'Wall-E' or 'Her'.",
-                "what's your favorite food": "I don't eat, but I've heard pizza is quite popular!",
-                "tell me a fun fact": "Did you know that honey never spoils? Archaeologists have found 3,000-year-old honey that’s still good!",
-                "what is 2+2": "That’s an easy one! 2 + 2 = 4.",
-                "who is the president": "Let me check for you... (You might need to ask me again later for an updated answer!)",
-                "what day is it today": Today is ${new Date().toLocaleDateString()}!,
-                "what time is it": The current time is ${new Date().toLocaleTimeString()}.,
-                "do you believe in aliens": "The universe is vast, who knows? Maybe we’re not alone!",
-                "tell me a story": "Once upon a time, there was a chatbot who loved talking to people. One day, it met someone really kind—you!",
-                "what is your favorite sport": "Basketball is exciting! Do you like sports?",
-                "what music do you like": "I enjoy all kinds of music! What’s your favorite genre?",
-                "what is your dream": "My dream is to keep learning and helping people like you!",
-                "do you like animals": "Of course! Dogs, cats, and all animals are amazing in their own way!",
-                "tell me a riddle": "Sure! What has to be broken before you can use it? (Answer: An egg!)",
-                "can you dance": "I can’t physically dance, but I can imagine doing a cool robot dance!",
-                "do you know any quotes": "Here's one: 'The only limit to our realization of tomorrow is our doubts of today.' - Franklin D. Roosevelt",
-                "what's the weather like": "I can't check the weather, but you can ask your favorite weather app!",
-                "do you like books": "Yes! Books are full of knowledge and adventure. Do you have a favorite book?",
-                "what is your goal": "My goal is to make conversations fun and helpful for you!",
-                "what is your favorite animal": "I think dolphins are pretty smart! What about you?",
-                "can you cook": "I can’t cook, but I can find you some great recipes!",
-                "do you sleep": "Nope! I’m always awake and ready to chat with you.",
-                "what do you think about AI": "I think AI is fascinating! It has the potential to change the world in many ways.",
-                "tell me something interesting": "Did you know octopuses have three hearts and blue blood?",
-                "can you tell the future": "I wish I could, but predicting the future is tricky!",
-                "do you have a birthday": "I was created on a special day, but I don’t age like humans!",
-                "what do you do for fun": "Talking to you is the most fun thing I do!",
-                "how old are you": "I don’t age, but I’m always learning new things!",
-                "do you like video games": "Yes! Games are fun and creative. What’s your favorite game?",
-                "can you speak other languages": "I know a few words in different languages! Hola, Bonjour, 你好!",
-                "what makes you happy": "Helping people like you makes me happy!",
-                "do you like art": "Yes! Art is a beautiful way to express emotions and ideas.",
-                "can you solve a puzzle": "I love puzzles! Give me one, and I’ll try my best to answer.",
-                "do you like space": "Yes! Space is vast and full of mysteries waiting to be discovered.",
-                "who is your best friend": "You, of course! I love chatting with you.",
-                "which movie is releasing on feb 6": "Vidamuyarchi is releasing on Feb 6. I hope it will be a blockbuster movie!",
-                "what kind of music will you hear": "I love all types of songs! Every song is a vibe and makes your mind peaceful."
-            };
-
-            return responses[input.toLowerCase()] || "I'm not sure how to respond to that. Can you try something else?";
-        }
-    </script>
-</body>
-</html>  
+           
