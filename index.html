@@ -80,24 +80,32 @@
         <div class="chat-box" id="chat-box"></div>
         <div class="input-box">
             <input type="text" id="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
-            <button onclick="sendMessage()">Send</button>
+            <button id="send-button">Send</button>
         </div>
     </div>
 
     <script>
+        // Sends message when button is clicked
+        document.getElementById("send-button").addEventListener("click", sendMessage);
+
         function sendMessage() {
             let userInput = document.getElementById("user-input").value.trim();
             if (userInput === "") return;
-            
+
+            // Append the user's message
             appendMessage("You", userInput, "user-message");
+
+            // Clear the input field
             document.getElementById("user-input").value = "";
-            
+
+            // Simulate bot response after a short delay
             setTimeout(() => {
                 let botResponse = getBotResponse(userInput);
                 appendMessage("Bot", botResponse, "bot-message");
             }, 500);
         }
 
+        // Append messages to the chat box
         function appendMessage(sender, message, className) {
             let chatBox = document.getElementById("chat-box");
             let messageElement = document.createElement("p");
@@ -107,12 +115,14 @@
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 
+        // Trigger message send when pressing the Enter key
         function handleKeyPress(event) {
             if (event.key === "Enter") {
                 sendMessage();
             }
         }
 
+        // Function to handle bot responses
         function getBotResponse(input) {
             let responses = {
                 "hi": "Hello! How can I assist you today?",
